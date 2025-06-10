@@ -208,7 +208,7 @@ public class UnleashClientBase {
     }
 }
 
-@available(iOS 13, tvOS 13, *)
+@available(iOS 13, tvOS 13, watchOS 6.0, *)
 public class UnleashClient: UnleashClientBase, ObservableObject {
     @MainActor
     public func start(
