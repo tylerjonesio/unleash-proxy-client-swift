@@ -1,5 +1,8 @@
 import Foundation
 import SwiftEventBus
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 @available(macOS 10.15, *)
 public class UnleashClientBase {
@@ -242,3 +245,6 @@ public class UnleashClient: UnleashClientBase, ObservableObject {
         }
     }
 }
+#if !canImport(Darwin)
+public protocol ObservableObject: AnyObject {}
+#endif

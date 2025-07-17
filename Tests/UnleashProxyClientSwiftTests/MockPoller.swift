@@ -7,6 +7,9 @@
 
 import Foundation
 @testable import UnleashProxyClientSwift
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 class MockPollerSession: PollerSession {
     var data: Data?

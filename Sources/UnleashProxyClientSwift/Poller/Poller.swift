@@ -1,6 +1,9 @@
 
 import Foundation
 import SwiftEventBus
+#if canImport(FoundationNetworking)
+import FoundationNetworking
+#endif
 
 public class Poller {
     var refreshInterval: Int?
